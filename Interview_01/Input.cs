@@ -12,7 +12,7 @@ namespace Interview_01
 
         public string Render()
         {
-            return "";
+            return "<input class=\"btn btn-primary\" id=\""+this.Id+""\" style=\""+this.Style+"\" placeholder=\""+this.Placeholder+"\"></input>";
         }
 
     }

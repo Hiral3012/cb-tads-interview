@@ -65,7 +65,7 @@ namespace UnitTests
             // TODO: make changes to the Button class that make the following test (and all previous tests) pass
             var button = new Button()
             {
-                Id = "thisButton",
+                Id = "thisButton2",
                 Style = "display: none;",
                 Text = "Something Else"
             };
@@ -78,7 +78,10 @@ namespace UnitTests
         public void Button2_OnRender_Works()
         {
             // TODO: make changes to the Button2 class that make the following test (and all previous tests) pass
-            var button = new Button2();
+            var button = new Button2()
+            {
+                Text = "Something"
+            };
             // should be able to add the "Something" string through a property
             const string expected = "<button class=\"btn btn-primary\">Something</button>";
             Assert.AreEqual(expected, button.Render());
@@ -88,7 +91,10 @@ namespace UnitTests
         public void Button2_OnRender_Works_2()
         {
             // TODO: make changes to the Button2 class that make the following test (and all previous tests) pass
-            var button = new Button2();
+            var button = new Button2()
+            {
+                Text = "Something Else"
+            };
             // should be able to add the "Something Else" string through a property
             const string expected = "<button class=\"btn btn-primary\">Something Else</button>";
             Assert.AreEqual(expected, button.Render());
@@ -99,7 +105,12 @@ namespace UnitTests
         public void Button2_OnRender_Id_Class_Works()
         {
             // TODO: make changes to the Button2 class that make the following test (and all previous tests) pass
-            var button = new Button2();
+            var button = new Button2()
+            {
+                Id = "thisButton",
+                Style = "display: none;",
+                Text = "Something"
+            };
             // should be able to add the "Something" text, id attribute and style attribute through properties
             const string expected = "<button class=\"btn btn-primary\" id=\"thisButton\" style=\"display: none;\">Something</button>";
             Assert.AreEqual(expected, button.Render());
@@ -110,7 +121,12 @@ namespace UnitTests
         public void Button2_OnRender_Id_Class_Works_2()
         {
             // TODO: make changes to the Button2 class that make the following test (and all previous tests) pass
-            var button = new Button2();
+            var button = new Button2()
+            {
+                Id = "thisButton2",
+                Style = "display: none;",
+                Text = "Something Else"
+            };
             // should be able to add the "Something Else" text, id attribute and style attribute through properties
             const string expected = "<button class=\"btn btn-primary\" id=\"thisButton2\" style=\"display: none;\">Something Else</button>";
             Assert.AreEqual(expected, button.Render());
